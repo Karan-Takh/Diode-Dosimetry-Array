@@ -1,0 +1,15 @@
+graph array_table {
+	node [bgcolor="brown:green" shape=rectangle]
+	"Diode Array" [label=<<TABLE>
+ <TR>
+   <TD border="3" style="radial" bgcolor="yellow"  gradientangle="60">Diode 1</TD>
+   <TD>Diode 2</TD>
+   <TD>Diode 3</TD>
+ </TR>
+ <TR>
+   <TD>Diode 4</TD>
+   <TD>Diode 5</TD>
+   <TD>cheese</TD>
+ </TR>
+</TABLE>>]
+}
