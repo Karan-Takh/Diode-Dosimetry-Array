@@ -15,17 +15,8 @@ df = pd.DataFrame(np.random.randint(0,100,size=(100001,40)), columns = columns) 
                                                                                     
 
 m = []
-answer = str(input("Please Select Method [Max / Integrate]: "))                 #need to select which method of coming up with the value
-valids1 = ["Max", "max", "m", "M"]
-valids2 = ["Integrate", "integrate", "Sum", "sum", "I", "i", "s", "S"]
+for i in range(1,40):
+    m.append(max(df[i]))
 
-i = 1
-while i in range(1,40):
-    if answer in valids1:    
-        m.append(max(df[i]))
-    elif answer in valids2:
-        m.append(sum(df[i]))
-    else:
-        print("Please select a valid form of analysis")
-        i = 42
+
 print(m)
