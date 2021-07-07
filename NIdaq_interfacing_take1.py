@@ -18,10 +18,7 @@ nidaqmx.stream_readers.AnalogMultiChannelReader.read_many_sample(
 
 
 
-# Populate arrays with the voltages read through each of the bnc ports.
-# for p in ports:
-#     for r in run:
-#         p.append(volt)
+
 
 
 task.stop()
@@ -33,3 +30,5 @@ task.close()
 
 # ------------ General Questions: --------------
 # Do we have to make 40 tasks, one for each bnc port / diode?
+#   - The stream_readers method might let us get all the data without doing that. 
+# Where do you specify which channels are being used in the multi channel reader function? 
