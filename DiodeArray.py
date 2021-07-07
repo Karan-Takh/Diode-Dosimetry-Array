@@ -10,7 +10,7 @@ voltdict = {'diode1': 50.96, 'diode2': 37.130, 'diode3': 66.593, 'diode4': 94.60
 # Takes the lowest and highest voltage values and creates nine equal intervals between these values
 voltsort = sorted(voltdict.items(), key=lambda voltdict: voltdict[1])
 voltrange = np.linspace(voltsort[0][1], voltsort[19][1], num=10)
-print(list(voltrange))
+print('Intervals:',list(voltrange))
 
 # Assigns cell and font color based on the value of the voltage
 colordict = {}
@@ -63,7 +63,7 @@ for key in voltdict.keys():
         colordict[key] = templist
     else: print(voltdict[key], 'is out of range')
 
-print(colordict)
+print('Assigned Colors:',colordict)
 
 # Creates the table
 h = Graph('array_table')
