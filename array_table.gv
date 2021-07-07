@@ -2,7 +2,7 @@ graph array_table {
 	node [bgcolor="brown:green" shape=rectangle]
 	"Diode Array" [label=<<TABLE>
     <TR>
-        <TD border="3" bgcolor="8" shape="square">Diode 1</TD>
+        <TD border="3" bgcolor="8">Diode 1</TD>
         <TD>Diode 2</TD>
         <TD>Diode 3</TD>
         <TD>Diode 4</TD>
@@ -29,5 +29,5 @@ graph array_table {
         <TD>Diode 19</TD>
         <TD>Diode 20</TD>
     </TR>
-</TABLE>> colorscheme=orrd9]
+</TABLE>> colorscheme=orrd8]
 }
