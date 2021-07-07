@@ -1,33 +1,33 @@
 graph array_table {
-	node [bgcolor="brown:green" shape=rectangle]
+	node [shape=rectangle]
 	"Diode Array" [label=<<TABLE>
     <TR>
-        <TD border="3" bgcolor="8">Diode 1</TD>
-        <TD>Diode 2</TD>
-        <TD>Diode 3</TD>
-        <TD>Diode 4</TD>
-        <TD>Diode 5</TD>
+        <TD bgcolor="5">Diode 1: 50 V</TD>
+        <TD bgcolor="4">Diode 2: 37 V</TD>
+        <TD bgcolor="6">Diode 3: 66 V</TD>
+        <TD bgcolor="9">Diode 4: 94 V</TD>
+        <TD bgcolor="2">Diode 5: 16 V</TD>
     </TR>
     <TR>
-        <TD>Diode 6: 51 V</TD>
-        <TD>Diode 7</TD>
-        <TD>Diode 8</TD>
-        <TD>Diode 9</TD>
-        <TD>Diode 10</TD>
+        <TD bgcolor="5">Diode 6: 51 V</TD>
+        <TD bgcolor="4">Diode 7: 45 V</TD>
+        <TD bgcolor="9">Diode 8: 100 V</TD>
+        <TD bgcolor="4">Diode 9: 39 V</TD>
+        <TD bgcolor="6">Diode 10: 64 V</TD>
     </TR>
     <TR>
-        <TD>Diode 11</TD>
-        <TD>Diode 12</TD>
-        <TD>Diode 13</TD>
-        <TD>Diode 14</TD>
-        <TD>Diode 15</TD>
+        <TD bgcolor="2">Diode 11: 23 V</TD>
+        <TD bgcolor="4">Diode 12: 41 V</TD>
+        <TD bgcolor="9">Diode 13: 90 V</TD>
+        <TD bgcolor="2">Diode 14: 17 V</TD>
+        <TD bgcolor="5">Diode 15: 52 V</TD>
     </TR>
     <TR>
-        <TD>Diode 16</TD>
-        <TD>Diode 17</TD>
-        <TD>Diode 18</TD>
-        <TD>Diode 19</TD>
-        <TD>Diode 20</TD>
+        <TD bgcolor="5">Diode 16: 48 V</TD>
+        <TD bgcolor="7">Diode 17: 78 V</TD>
+        <TD bgcolor="5">Diode 18: 52 V</TD>
+        <TD bgcolor="7">Diode 19: 78 V</TD>
+        <TD  bgcolor="1" fontcolor="#FFFFFF">Diode 20: 3 V</TD>
     </TR>
-</TABLE>> colorscheme=orrd8]
+</TABLE>> colorscheme=orrd9]
 }
