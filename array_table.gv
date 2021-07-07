@@ -2,32 +2,32 @@ graph array_table {
 	node [shape=rectangle]
 	"Diode Array" [label=<<TABLE>
     <TR>
-        <TD bgcolor="5"><FONT COLOR="black">Diode 1: 50 V</FONT></TD>
-        <TD bgcolor="4"><FONT COLOR="black">Diode 2: 37 V</FONT></TD>
-        <TD bgcolor="6"><FONT COLOR="white">Diode 3: 66 V</FONT></TD>
-        <TD bgcolor="9"><FONT COLOR="white">Diode 4: 94 V</FONT></TD>
-        <TD bgcolor="2"><FONT COLOR="black">Diode 5: 16 V</FONT></TD>
+        <TD bgcolor="5"><FONT COLOR="black">Diode 1: 50.96 V</FONT></TD>
+        <TD bgcolor="4"><FONT COLOR="black">Diode 2: 37.13 V</FONT></TD>
+        <TD bgcolor="6"><FONT COLOR="white">Diode 3: 66.593 V</FONT></TD>
+        <TD bgcolor="9"><FONT COLOR="white">Diode 4: 94.602 V</FONT></TD>
+        <TD bgcolor="2"><FONT COLOR="black">Diode 5: 16.279 V</FONT></TD>
     </TR>
     <TR>
-        <TD bgcolor="5"><FONT COLOR="black">Diode 6: 51 V</FONT></TD>
-        <TD bgcolor="4"><FONT COLOR="black">Diode 7: 45 V</FONT></TD>
-        <TD bgcolor="9"><FONT COLOR="white">Diode 8: 100 V</FONT></TD>
-        <TD bgcolor="4"><FONT COLOR="black">Diode 9: 39 V</FONT></TD>
-        <TD bgcolor="6"><FONT COLOR="white">Diode 10: 64 V</FONT></TD>
+        <TD bgcolor="5"><FONT COLOR="black">Diode 6: 51.617 V</FONT></TD>
+        <TD bgcolor="4"><FONT COLOR="black">Diode 7: 45.375 V</FONT></TD>
+        <TD bgcolor="9"><FONT COLOR="white">Diode 8: 100.671 V</FONT></TD>
+        <TD bgcolor="4"><FONT COLOR="black">Diode 9: 39.795 V</FONT></TD>
+        <TD bgcolor="6"><FONT COLOR="white">Diode 10: 64.414 V</FONT></TD>
     </TR>
     <TR>
-        <TD bgcolor="2"><FONT COLOR="black">Diode 11: 23 V</FONT></TD>
-        <TD bgcolor="4"><FONT COLOR="black">Diode 12: 41 V</FONT></TD>
-        <TD bgcolor="9"><FONT COLOR="white">Diode 13: 90 V</FONT></TD>
-        <TD bgcolor="2"><FONT COLOR="black">Diode 14: 17 V</FONT></TD>
-        <TD bgcolor="5"><FONT COLOR="black">Diode 15: 52 V</FONT></TD>
+        <TD bgcolor="2"><FONT COLOR="black">Diode 11: 23.623 V</FONT></TD>
+        <TD bgcolor="4"><FONT COLOR="black">Diode 12: 41.635 V</FONT></TD>
+        <TD bgcolor="9"><FONT COLOR="white">Diode 13: 90.643 V</FONT></TD>
+        <TD bgcolor="2"><FONT COLOR="black">Diode 14: 17.266 V</FONT></TD>
+        <TD bgcolor="5"><FONT COLOR="black">Diode 15: 52.15 V</FONT></TD>
     </TR>
     <TR>
-        <TD bgcolor="5"><FONT COLOR="black">Diode 16: 48 V</FONT></TD>
-        <TD bgcolor="7"><FONT COLOR="white">Diode 17: 78 V</FONT></TD>
-        <TD bgcolor="5"><FONT COLOR="black">Diode 18: 52 V</FONT></TD>
-        <TD bgcolor="7"><FONT COLOR="white">Diode 19: 78 V</FONT></TD>
-        <TD bgcolor="1"><FONT COLOR="black">Diode 20: 3 V</FONT></TD>
+        <TD bgcolor="5"><FONT COLOR="black">Diode 16: 48.245 V</FONT></TD>
+        <TD bgcolor="7"><FONT COLOR="white">Diode 17: 78.973 V</FONT></TD>
+        <TD bgcolor="5"><FONT COLOR="black">Diode 18: 52.669 V</FONT></TD>
+        <TD bgcolor="7"><FONT COLOR="white">Diode 19: 78.938 V</FONT></TD>
+        <TD bgcolor="1"><FONT COLOR="black">Diode 20: 3.696 V</FONT></TD>
     </TR>
 </TABLE>> colorscheme=orrd9]
 }

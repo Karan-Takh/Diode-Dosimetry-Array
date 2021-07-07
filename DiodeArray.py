@@ -1,19 +1,19 @@
 from graphviz import Graph
 import numpy as np
 
-voltdict = {'diode1': 50, 'diode2': 37, 'diode3': 66, 'diode4': 94, 'diode5': 16,
-            'diode6': 51, 'diode7': 45, 'diode8': 100, 'diode9': 39, 'diode10': 64,
-            'diode11': 23, 'diode12': 41, 'diode13': 90, 'diode14': 17, 'diode15': 52,
-            'diode16': 48, 'diode17': 78, 'diode18': 52, 'diode19': 78, 'diode20': 3}
+# Sample dictionary of voltages with values between 0 and 100
+voltdict = {'diode1': 50.96, 'diode2': 37.130, 'diode3': 66.593, 'diode4': 94.602, 'diode5': 16.279,
+            'diode6': 51.617, 'diode7': 45.375, 'diode8': 100.671, 'diode9': 39.795, 'diode10': 64.414,
+            'diode11': 23.623, 'diode12': 41.635, 'diode13': 90.643, 'diode14': 17.266, 'diode15': 52.150,
+            'diode16': 48.245, 'diode17': 78.973, 'diode18': 52.669, 'diode19': 78.938, 'diode20': 3.696}
 
-
+# Takes the lowest and highest voltage values and creates nine equal intervals between these values
 voltsort = sorted(voltdict.items(), key=lambda voltdict: voltdict[1])
-print(voltsort)
 voltrange = np.linspace(voltsort[0][1], voltsort[19][1], num=10)
 print(list(voltrange))
 
+# Assigns cell and font color based on the value of the voltage
 colordict = {}
-
 for key in voltdict.keys():
     templist = []
     if voltrange[0] <= voltdict[key] < voltrange[1]:
@@ -65,6 +65,7 @@ for key in voltdict.keys():
 
 print(colordict)
 
+# Creates the table
 h = Graph('array_table')
 h.attr('node', shape='rectangle')
 h.node('Diode Array', colorscheme='orrd9', label=f'''<<TABLE>
