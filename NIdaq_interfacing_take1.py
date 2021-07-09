@@ -11,7 +11,7 @@ value = task.read()
 print(value)
 
 # Create array with enough spots to be filled by voltages. We know there are 40 rows, but unsure how many columns.
-array = np.empty((10000000, 40), dtype=float, like=None)
+array = np.empty((100000, 40), dtype=float, like=None)
 nidaqmx.stream_readers.AnalogMultiChannelReader.read_many_sample(
     data=array,
     number_of_samples_per_channel=nidaqmx.constants.READ_ALL_AVAILABLE,
@@ -22,6 +22,8 @@ channels = nidaqmx._task_modules.channel_collection.ChannelCollection.channel_na
 max_volts = list()
 int_volts = list()
 
+# Print array to to understand the format of the produced array. 
+print(array)
 
 # Go through each row of array (each diode), and get the max from each column to be added to the list max_volts, and the integrated value of the rows. 
 for i in range (0, 40):
@@ -31,6 +33,8 @@ for i in range (0, 40):
 # Create dictionaries for the associated values for each diode
 max_voltdict = dict(zip(channels, max_volts))
 int_voltdict = dict(zip(channels, int_volts))
+
+print(max_volts)
 
 task.stop()
 task.close()
