@@ -36,7 +36,7 @@ for i in range (0, 40):
 max_voltdict = dict(zip(channels, max_volts))
 int_voltdict = dict(zip(channels, int_volts))
 
-print(max_volts)
+print("Max volts is ", max_volts)
 
 task.stop()
 task.close()
