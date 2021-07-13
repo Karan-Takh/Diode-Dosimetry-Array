@@ -135,6 +135,18 @@ h = Graph('array_table')
 h.attr('node', shape='rectangle')
 h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
     <TR>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="{colordict['diode37'][1]}" fixedsize="true" width="70"
+        height="70"><FONT COLOR="{colordict['diode37'][2]}">Diode 37 <BR align="center" /> {voltdict['diode37']} V</FONT></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+    </TR>
+    <TR>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
         <TD bgcolor="{colordict['diode1'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode1'][2]}">Diode 1 <BR align="center" /> {voltdict['diode1']} V</FONT></TD>
         <TD bgcolor="{colordict['diode2'][1]}" fixedsize="true" width="70"
@@ -145,10 +157,12 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
         height="70"><FONT COLOR="{colordict['diode4'][2]}">Diode 4 <BR align="center" /> {voltdict['diode4']} V</FONT></TD>
         <TD bgcolor="{colordict['diode5'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode5'][2]}">Diode 5 <BR align="center" /> {voltdict['diode5']} V</FONT></TD>
-    </TR>
-    <TR>
         <TD bgcolor="{colordict['diode6'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode6'][2]}">Diode 6 <BR align="center" /> {voltdict['diode6']} V</FONT></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+    </TR>
+    <TR>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
         <TD bgcolor="{colordict['diode7'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode7'][2]}">Diode 7 <BR align="center" /> {voltdict['diode7']} V</FONT></TD>
         <TD bgcolor="{colordict['diode8'][1]}" fixedsize="true" width="70"
@@ -157,32 +171,35 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
         height="70"><FONT COLOR="{colordict['diode9'][2]}">Diode 9 <BR align="center" /> {voltdict['diode9']} V</FONT></TD>
         <TD bgcolor="{colordict['diode10'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode10'][2]}">Diode 10 <BR align="center" /> {voltdict['diode10']} V</FONT></TD>
-    </TR>
-    <TR>
         <TD bgcolor="{colordict['diode11'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode11'][2]}">Diode 11 <BR align="center" /> {voltdict['diode11']} V</FONT></TD>
         <TD bgcolor="{colordict['diode12'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode12'][2]}">Diode 12 <BR align="center" /> {voltdict['diode12']} V</FONT></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+    </TR>
+    <TR>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
         <TD bgcolor="{colordict['diode13'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode13'][2]}">Diode 13 <BR align="center" /> {voltdict['diode13']} V</FONT></TD>
         <TD bgcolor="{colordict['diode14'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode14'][2]}">Diode 14 <BR align="center" /> {voltdict['diode14']} V</FONT></TD>
         <TD bgcolor="{colordict['diode15'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode15'][2]}">Diode 15 <BR align="center" /> {voltdict['diode15']} V</FONT></TD>
-    </TR>
-    <TR>
         <TD bgcolor="{colordict['diode16'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode16'][2]}">Diode 16 <BR align="center" /> {voltdict['diode16']} V</FONT></TD>
         <TD bgcolor="{colordict['diode17'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode17'][2]}">Diode 17 <BR align="center" /> {voltdict['diode17']} V</FONT></TD>
         <TD bgcolor="{colordict['diode18'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode18'][2]}">Diode 18 <BR align="center" /> {voltdict['diode18']} V</FONT></TD>
+        height="70"><FONT COLOR="{colordict['diode18'][2]}">Diode 18 <BR align="center" /> {voltdict['diode18']} V</FONT></TD>       
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD> 
+    </TR>
+    <TR>
+        <TD bgcolor="{colordict['diode38'][1]}" fixedsize="true" width="70"
+        height="70"><FONT COLOR="{colordict['diode38'][2]}">Diode 38 <BR align="center" /> {voltdict['diode38']} V</FONT></TD>
         <TD bgcolor="{colordict['diode19'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode19'][2]}">Diode 19 <BR align="center" /> {voltdict['diode19']} V</FONT></TD>
         <TD bgcolor="{colordict['diode20'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode20'][2]}">Diode 20 <BR align="center" /> {voltdict['diode20']} V</FONT></TD>
-    </TR>
-    <TR>
         <TD bgcolor="{colordict['diode21'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode21'][2]}">Diode 21 <BR align="center" /> {voltdict['diode21']} V</FONT></TD>
         <TD bgcolor="{colordict['diode22'][1]}" fixedsize="true" width="70"
@@ -191,10 +208,13 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
         height="70"><FONT COLOR="{colordict['diode23'][2]}">Diode 23 <BR align="center" /> {voltdict['diode23']} V</FONT></TD>
         <TD bgcolor="{colordict['diode24'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode24'][2]}">Diode 24 <BR align="center" /> {voltdict['diode24']} V</FONT></TD>
+        <TD bgcolor="{colordict['diode39'][1]}" fixedsize="true" width="70"
+        height="70"><FONT COLOR="{colordict['diode39'][2]}">Diode 39 <BR align="center" /> {voltdict['diode39']} V</FONT></TD>
+    </TR>
+    <TR>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
         <TD bgcolor="{colordict['diode25'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode25'][2]}">Diode 25 <BR align="center" /> {voltdict['diode25']} V</FONT></TD>
-    </TR>    
-    <TR>
         <TD bgcolor="{colordict['diode26'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode26'][2]}">Diode 26 <BR align="center" /> {voltdict['diode26']} V</FONT></TD>
         <TD bgcolor="{colordict['diode27'][1]}" fixedsize="true" width="70"
@@ -205,8 +225,10 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
         height="70"><FONT COLOR="{colordict['diode29'][2]}">Diode 29 <BR align="center" /> {voltdict['diode29']} V</FONT></TD>
         <TD bgcolor="{colordict['diode30'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode30'][2]}">Diode 30 <BR align="center" /> {voltdict['diode30']} V</FONT></TD>
-    </TR>    
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+    </TR>       
     <TR>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
         <TD bgcolor="{colordict['diode31'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode31'][2]}">Diode 31 <BR align="center" /> {voltdict['diode31']} V</FONT></TD>
         <TD bgcolor="{colordict['diode32'][1]}" fixedsize="true" width="70"
@@ -217,19 +239,21 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
         height="70"><FONT COLOR="{colordict['diode34'][2]}">Diode 34 <BR align="center" /> {voltdict['diode34']} V</FONT></TD>
         <TD bgcolor="{colordict['diode35'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode35'][2]}">Diode 35 <BR align="center" /> {voltdict['diode35']} V</FONT></TD>
-    </TR>   
-    <TR>
         <TD bgcolor="{colordict['diode36'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode36'][2]}">Diode 36 <BR align="center" /> {voltdict['diode36']} V</FONT></TD>
-        <TD bgcolor="{colordict['diode37'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode37'][2]}">Diode 37 <BR align="center" /> {voltdict['diode37']} V</FONT></TD>
-        <TD bgcolor="{colordict['diode38'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode38'][2]}">Diode 38 <BR align="center" /> {voltdict['diode38']} V</FONT></TD>
-        <TD bgcolor="{colordict['diode39'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode39'][2]}">Diode 39 <BR align="center" /> {voltdict['diode39']} V</FONT></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+    </TR>   
+    <TR>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
         <TD bgcolor="{colordict['diode40'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode40'][2]}">Diode 40 <BR align="center" /> {voltdict['diode40']} V</FONT></TD>
-    </TR> 
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+    </TR>
 </TABLE>>''')
 
 h.view()
