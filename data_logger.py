@@ -41,7 +41,7 @@ for i in channels:
             j+=1
     MVolt.append(round(max(data),2))     #These look very different when the voltages are around 4V but are roughly the same when the channels
     IntVolt.append(sum(data))   #are correctly calibrated 
-    dataframe.insert(0,i,data)   #would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
+    dataframe.insert(len(dataframe.columns)+1,i,data)   #would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but
                                  #But it currently goes the other way
    
 ### Creates Secodary Array for Ease of Access###
