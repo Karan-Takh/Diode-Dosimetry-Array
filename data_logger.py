@@ -65,7 +65,7 @@ voltdict = dict(zip(names,MVolt))       #Used MVolt and not IntVolt as it seemed
 
 ###################################################################################################################
 
-# Takes the lowest and highest voltage values and creates nine equal intervals between these values
+# Takes the lowest and highest voltage values and creates 22 equal intervals between these values
 voltsort = sorted(voltdict.items(), key=lambda voltdict: voltdict[1])
 voltrange = np.linspace(voltsort[0][1], voltsort[39][1], num=22)
 print('Intervals:', list(voltrange))
