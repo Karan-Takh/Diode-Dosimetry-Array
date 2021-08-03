@@ -47,7 +47,7 @@ for i in channels:
 ### Creates Secondary Array for Ease of Access ###
 types = ["Int","Max"]    
 voltframe = pd.DataFrame(index = types,columns = channels)
-vframe_length = len(voltframe)
+# vframe_length = len(voltframe)
 voltframe.loc[types[0]] = IntVolt 
 voltframe.loc[types[1]] = MVolt
 
@@ -198,19 +198,20 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
         <TD bgcolor="{colordict['diode4'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode4'][2]}">Diode 4 <BR align="center" /> {voltdict['diode4']} V</FONT></TD>
     </TR>
-
-
-    <TR>
-         <TD bgcolor="{colordict['diode5'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode5'][2]}">Diode 5 <BR align="center" /> {voltdict['diode5']} V</FONT></TD>
-        <TD bgcolor="{colordict['diode6'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode6'][2]}">Diode 6 <BR align="center" /> {voltdict['diode6']} V</FONT></TD>
-        <TD bgcolor="{colordict['diode7'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode7'][2]}">Diode 7 <BR align="center" /> {voltdict['diode7']} V</FONT></TD>
-        <TD bgcolor="{colordict['diode8'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode8'][2]}">Diode 8 <BR align="center" /> {voltdict['diode8']} V</FONT></TD>
-    </TR>    
+   
 </TABLE>>''')
+
+
+    # <TR>
+    #      <TD bgcolor="{colordict['diode5'][1]}" fixedsize="true" width="70"
+    #     height="70"><FONT COLOR="{colordict['diode5'][2]}">Diode 5 <BR align="center" /> {voltdict['diode5']} V</FONT></TD>
+    #     <TD bgcolor="{colordict['diode6'][1]}" fixedsize="true" width="70"
+    #     height="70"><FONT COLOR="{colordict['diode6'][2]}">Diode 6 <BR align="center" /> {voltdict['diode6']} V</FONT></TD>
+    #     <TD bgcolor="{colordict['diode7'][1]}" fixedsize="true" width="70"
+    #     height="70"><FONT COLOR="{colordict['diode7'][2]}">Diode 7 <BR align="center" /> {voltdict['diode7']} V</FONT></TD>
+    #     <TD bgcolor="{colordict['diode8'][1]}" fixedsize="true" width="70"
+    #     height="70"><FONT COLOR="{colordict['diode8'][2]}">Diode 8 <BR align="center" /> {voltdict['diode8']} V</FONT></TD>
+    # </TR>
 
 # Creates the table (Please don't edit any of the code below)
 # h = Graph('array_table')
