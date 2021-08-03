@@ -20,17 +20,17 @@ IntVolt = []
 names = []
 
 
-#Creates the names for each channel (all 40)
+# Creates the names for each channel (all 40)
 for j in range(1,6):
     for i in range(0,8):
         channels.append(header+str(j)+address+str(i))
 
-#Creates empty dataframe
+# Creates empty dataframe
 dataframe = pd.DataFrame()
 
 
 
-#Starts a loop ofr each channel, for each channel takes 15 measurements and saves it into an array, after it takes all 15
+# Starts a loop for each channel, for each channel takes 15 measurements and saves it into an array, after it takes all 15
 # it loads the array into the dataframe and starts again
 for i in channels:
     j = 0
@@ -39,29 +39,36 @@ for i in channels:
             task.ai_channels.add_ai_voltage_chan(i)
             data[j] = (task.read())
             j+=1
+<<<<<<< Updated upstream
     MVolt.append(round(max(data),2))     #These look very different when the voltages are around 4V but are roughly the same when the channels
     IntVolt.append(sum(data))   #are correctly calibrated 
     dataframe.insert(len(dataframe.columns)+1,i,data)   #would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but
                                  #But it currently goes the other way
+=======
+    MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
+    IntVolt.append(sum(data))                                   # are correctly calibrated 
+    dataframe.insert(len(dataframe.columns.tolist() + 1),i,data)    # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
+                                                                # But it currently goes the other way
+>>>>>>> Stashed changes
    
-### Creates Secodary Array for Ease of Access###
+### Creates Secondary Array for Ease of Access ###
 types = ["Int","Max"]    
 voltframe = pd.DataFrame(index = types,columns = channels)
 vframe_length = len(voltframe)
 voltframe.loc[types[0]] = IntVolt 
 voltframe.loc[types[1]] = MVolt
 
-### Creates List of Names and a dictionary as used in Kaern's Code ###
+### Creates List of Names and a dictionary as used in Karen's Code ###
 for i in range(1,41):
     names.append("diode"+str(i))
 
 
-voltdict = dict(zip(names,MVolt))       #Used MVolt and not IntVolt as it seemed more accurate (for now)
+voltdict = dict(zip(names,MVolt))       # Used MVolt and not IntVolt as it seemed more accurate (for now)
 
 
 ####################################################################################################################
 
-#KARENS STUFF
+# KARENS STUFF
 
 ###################################################################################################################
 
