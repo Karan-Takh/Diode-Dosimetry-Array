@@ -39,17 +39,10 @@ for i in channels:
             task.ai_channels.add_ai_voltage_chan(i)
             data[j] = (task.read())
             j+=1
-<<<<<<< Updated upstream
-    MVolt.append(round(max(data),2))     #These look very different when the voltages are around 4V but are roughly the same when the channels
-    IntVolt.append(sum(data))   #are correctly calibrated 
-    dataframe.insert(len(dataframe.columns)+1,i,data)   #would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but
-                                 #But it currently goes the other way
-=======
     MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
     IntVolt.append(sum(data))                                   # are correctly calibrated 
     dataframe.insert(len(dataframe.columns.tolist() + 1),i,data)    # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
                                                                 # But it currently goes the other way
->>>>>>> Stashed changes
    
 ### Creates Secondary Array for Ease of Access ###
 types = ["Int","Max"]    
