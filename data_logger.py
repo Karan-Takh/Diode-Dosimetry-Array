@@ -14,7 +14,7 @@ import numpy as np
 header = "Dev"
 address= "/ai"
 channels = []
-data = [0]*15
+data = [0]*100
 MVolt = []
 IntVolt = []
 names = []
@@ -27,23 +27,25 @@ for j in range(1,6):
 
 # Creates empty dataframe
 dataframe = pd.DataFrame()
-
+pd.set_option('display.max_columns', None) #prevents trailing elipses
 
 
 # Starts a loop for each channel, for each channel takes 15 measurements and saves it into an array, after it takes all 15
 # it loads the array into the dataframe and starts again
 for i in channels:
     j = 0
-    while j < 15:
+    while j < 100:
         with ni.Task() as task:
             task.ai_channels.add_ai_voltage_chan(i)
             data[j] = (task.read())
             j+=1
     MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
     IntVolt.append(sum(data))                                   # are correctly calibrated 
-    dataframe.insert(len(dataframe.columns.tolist() + 1),i,data)    # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
+    dataframe.insert(len(dataframe.columns),i,data)    # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
                                                                 # But it currently goes the other way
    
+# print(dataframe)
+
 ### Creates Secondary Array for Ease of Access ###
 types = ["Int","Max"]    
 voltframe = pd.DataFrame(index = types,columns = channels)
@@ -191,12 +193,12 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
     <TR>
          <TD bgcolor="{colordict['diode1'][1]}" fixedsize="true" width="70"
         height="70"><FONT COLOR="{colordict['diode1'][2]}">Diode 1 <BR align="center" /> {voltdict['diode1']} V</FONT></TD>
-        <TD bgcolor="{colordict['diode2'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode2'][2]}">Diode 2 <BR align="center" /> {voltdict['diode2']} V</FONT></TD>
-        <TD bgcolor="{colordict['diode3'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode3'][2]}">Diode 3 <BR align="center" /> {voltdict['diode3']} V</FONT></TD>
-        <TD bgcolor="{colordict['diode4'][1]}" fixedsize="true" width="70"
-        height="70"><FONT COLOR="{colordict['diode4'][2]}">Diode 4 <BR align="center" /> {voltdict['diode4']} V</FONT></TD>
+        <TD bgcolor="{colordict['diode14'][1]}" fixedsize="true" width="70"
+        height="70"><FONT COLOR="{colordict['diode14'][2]}">Diode 2 <BR align="center" /> {voltdict['diode14']} V</FONT></TD>
+        <TD bgcolor="{colordict['diode22'][1]}" fixedsize="true" width="70"
+        height="70"><FONT COLOR="{colordict['diode22'][2]}">Diode 3 <BR align="center" /> {voltdict['diode22']} V</FONT></TD>
+        <TD bgcolor="{colordict['diode30'][1]}" fixedsize="true" width="70"
+        height="70"><FONT COLOR="{colordict['diode30'][2]}">Diode 4 <BR align="center" /> {voltdict['diode30']} V</FONT></TD>
     </TR>
    
 </TABLE>>''')
