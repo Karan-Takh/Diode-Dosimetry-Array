@@ -17,7 +17,7 @@ from nidaqmx.constants import AcquisitionType
 header = "Dev"
 address= "/ai"
 channels = []
-data = [0]*1000
+data = [0]*1000000
 MVolt = []
 IntVolt = []
 names = []
@@ -37,16 +37,16 @@ pd.set_option('display.max_columns', None) #prevents trailing elipses
 # it loads the array into the dataframe and starts again
 for i in channels:
     j = 0
-    ni.Task().timing.cfg_samp_clk_timing(100, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=5)
-    while j < len(data):
-        with ni.Task() as task:
+    with ni.Task() as task:
+        task.timing.cfg_samp_clk_timing(1000000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=1000000)
+        while j < len(data):
             task.ai_channels.add_ai_voltage_chan(i)
             data[j] = (task.read())
             j+=1
-    
+    task.close()
     MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
     IntVolt.append(sum(data))                                   # are correctly calibrated 
-    dataframe.insert(len(dataframe.columns),i,data)    # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
+    dataframe.insert(len(dataframe.columns),i,data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
                                                                 # But it currently goes the other way
    
 # print(dataframe)
@@ -415,5 +415,5 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
     </TR>
 </TABLE>>''')
-task.close()
+
 h.view()
