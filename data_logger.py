@@ -37,6 +37,7 @@ pd.set_option('display.max_columns', None) #prevents trailing elipses
 # it loads the array into the dataframe and starts again
 for i in channels:
     j = 0
+    ni.Task().di_channels.add_di_chan("cDAQ1Mod3/port0/line0", line_grouping=LineGrouping.CHAN_PER_LINE)
     ni.Task().timing.cfg_samp_clk_timing(100, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=5)
     while j < len(data):
         with ni.Task() as task:
