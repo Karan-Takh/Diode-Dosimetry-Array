@@ -22,33 +22,36 @@ MVolt = []
 IntVolt = []
 names = []
 
+ni.Task.start()
 
 # Creates the names for each channel (all 40)
 for j in range(1,6):
     for i in range(0,8):
         channels.append(header+str(j)+address+str(i))
+        ni.Task().ai_channels.add_ai_voltage_chan(header+str(j)+address+str(i))
 
 # Creates empty dataframe
 dataframe = pd.DataFrame()
-pd.set_option('display.max_columns', None) #prevents trailing elipses
+pd.set_option('display.max_columns', None) # prevents trailing elipses
 
 
-# Starts a loop for each channel, for each channel takes 15 measurements and saves it into an array, after it takes all 15
+# Starts a loop for each channel, for each channel takes 1 mil measurements and saves it into an array, after it takes all million
 # it loads the array into the dataframe and starts again
 for i in channels:
     j = 0
     with ni.Task() as task:
+        # task.ai_channels.add_ai_voltage_chan(i)
         task.timing.cfg_samp_clk_timing(1000000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=1000000)
         while j < len(data):
-
-            task.ai_channels.add_ai_voltage_chan(i)
             data[j] = (task.read())
             j+=1
-    task.close()
     MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
     IntVolt.append(sum(data))                                   # are correctly calibrated 
     dataframe.insert(len(dataframe.columns),i,data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
                                                                 # But it currently goes the other way
+
+task.stop()
+task.close()
    
 # print(dataframe)
 
@@ -76,7 +79,8 @@ voltdict = dict(zip(names,MVolt))       # Used MVolt and not IntVolt as it seeme
 # Takes the lowest and highest voltage values and creates 22 equal intervals between these values
 voltsort = sorted(voltdict.items(), key=lambda voltdict: voltdict[1])
 voltrange = np.linspace(voltsort[0][1], voltsort[39][1], num=22)
-print('Intervals:', list(voltrange))
+
+# print('Intervals:', list(voltrange))  --- Don't print; will get crazy as we're doing million samples
 
 # Assigns cell and font color based on the value of the voltage
 colordict = {}
