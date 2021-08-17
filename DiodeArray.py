@@ -164,10 +164,11 @@ h = Graph('array_table')
 # h.node_attr['test']='square'
 # h.add_node(1, shape='square')
 # h.node('4', 'Ni!', shape='square')
-h.node('1',pos='1,2!')
-h.edge('1','2')
-h.attr('node', shape='square')
-h.node('test', **{'width':'1', 'height':'1'})
+
+# h.node('1',pos='1,2!')
+# h.edge('1','2')
+# h.attr('node', shape='square')
+# h.node('test', **{'width':'1', 'height':'1'})
 h.attr('node', shape='rectangle')
 h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
     <TR>
@@ -362,7 +363,7 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
     </TR>
 </TABLE>>''')
 
-h.attr('node', shape='square')
-h.node('test 2', **{'width':'1', 'height':'1'})
+# h.attr('node', shape='square')
+# h.node('test 2', **{'width':'1', 'height':'1'})
 
 h.view()
