@@ -40,6 +40,7 @@ for i in channels:
     with ni.Task() as task:
         task.timing.cfg_samp_clk_timing(1000000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=1000000)
         while j < len(data):
+
             task.ai_channels.add_ai_voltage_chan(i)
             data[j] = (task.read())
             j+=1
