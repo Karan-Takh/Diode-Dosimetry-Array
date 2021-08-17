@@ -8,13 +8,16 @@ import pandas as pd
 import nidaqmx as ni
 from graphviz import Graph
 import numpy as np
+from nidaqmx.constants import LineGrouping
+from nidaqmx.constants import Edge
+from nidaqmx.constants import AcquisitionType
 
 ### Initializing Things ###
 # Header is just the device string, the number j is which device(Dev1 - Dev5), the number i is which port on the device (ai0 - ai7)
 header = "Dev"
 address= "/ai"
 channels = []
-data = [0]*100
+data = [0]*1000
 MVolt = []
 IntVolt = []
 names = []
@@ -34,11 +37,13 @@ pd.set_option('display.max_columns', None) #prevents trailing elipses
 # it loads the array into the dataframe and starts again
 for i in channels:
     j = 0
-    while j < 100:
+    ni.Task().timing.cfg_samp_clk_timing(100, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=5)
+    while j < len(data):
         with ni.Task() as task:
             task.ai_channels.add_ai_voltage_chan(i)
             data[j] = (task.read())
             j+=1
+    
     MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
     IntVolt.append(sum(data))                                   # are correctly calibrated 
     dataframe.insert(len(dataframe.columns),i,data)    # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
@@ -410,5 +415,5 @@ h.node('Diode Array', label=f'''<<TABLE cellspacing="10">
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
     </TR>
 </TABLE>>''')
-
+task.close()
 h.view()
