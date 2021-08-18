@@ -47,9 +47,9 @@ with ni.Task() as task:
         while j < len(data):
             data[j] = (task.read())
             j+=1
-    MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
-    IntVolt.append(sum(data))                                   # are correctly calibrated 
-    dataframe.insert(len(dataframe.columns),i,data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
+        MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
+        IntVolt.append(sum(data))                                   # are correctly calibrated 
+        dataframe.insert(len(dataframe.columns),i,data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
                                                                     # But it currently goes the other way
 
     task.stop()

@@ -22,37 +22,38 @@ MVolt = []
 IntVolt = []
 names = []
 
-with ni.Task() as task:
 
-    # Creates the names for each channel (all 40)
-    for j in range(1,6):
-        task = "Dev"+ str(j)
+
+# Outermost loop to loop through each pxi device as a separate task. 
+for j in range(1,6):
+    task = "Dev" + str(j)
+    with ni.Task() as task:
         for i in range(0,8):
             channels.append(header+str(j)+address+str(i))
             task.ai_channels.add_ai_voltage_chan(header+str(j)+address+str(i))
             
-    # task.start()
-    # Set the timing for the task
-    task.timing.cfg_samp_clk_timing(1000000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=1000000)
+        
+        # Set the timing for the task
+        task.timing.cfg_samp_clk_timing(1000000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=1000000)
 
-    # Creates empty dataframe
-    dataframe = pd.DataFrame()
-    pd.set_option('display.max_columns', None) # prevents trailing elipses
+        # Creates empty dataframe
+        dataframe = pd.DataFrame()
+        pd.set_option('display.max_columns', None) # prevents trailing elipses
 
 
-    # Starts a loop for each channel, for each channel takes 1 mil measurements and saves it into an array, after it takes all million
-    # it loads the array into the dataframe and starts again
-    for i in channels:
-        j = 0
-        while j < len(data):
-            data[j] = (task.read())
-            j+=1
-    MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
-    IntVolt.append(sum(data))                                   # are correctly calibrated 
-    dataframe.insert(len(dataframe.columns),i,data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
+        # Starts a loop for each channel, for each channel takes 1 mil measurements and saves it into an array, after it takes all million
+        # it loads the array into the dataframe and starts again
+        for i in channels:
+            k = 0
+            while k < len(data):
+                data[k] = (task.read())
+                k+=1
+            MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
+            IntVolt.append(sum(data))                                   # are correctly calibrated 
+            dataframe.insert(len(dataframe.columns),i,data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
                                                                     # But it currently goes the other way
 
-    task.stop()
+        
 # task.close()
    
 # print(dataframe)
