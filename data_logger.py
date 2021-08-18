@@ -26,6 +26,7 @@ with ni.Task() as task:
 
     # Creates the names for each channel (all 40)
     for j in range(1,6):
+        task = "Dev"+ str(j)
         for i in range(0,8):
             channels.append(header+str(j)+address+str(i))
             task.ai_channels.add_ai_voltage_chan(header+str(j)+address+str(i))
