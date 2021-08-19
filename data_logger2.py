@@ -29,7 +29,7 @@ s = 0
 for j in range(1,6):
     # Make a separate list for the channels of the specific device we are dealing with
     current_chans = []
-    task = ni.Task()
+    task = ni.Task("Dev"+str(j))
     print("The task is Dev" + str(j))
     # task = "Dev" + str(j)
     # with ni.Task() as task:
@@ -52,11 +52,9 @@ for j in range(1,6):
     
     # Starts a loop for each channel, for each channel takes 1 mil measurements and saves it into an array, after it takes all million
     # it loads the array into the dataframe and starts again
-    for count, i in enumerate(channels, start=s):
+    for count, i in enumerate(current_chans, start=s):
         print("start is", s)
-        print(channels.index(i)+8)
-            # Define task and add channel with each loop through i to keep the task.read from returning a list of lists, rather than one list
-        # task.ai_channels.add_ai_voltage_chan(i)
+        print("For channel:", i)
         task.timing.cfg_samp_clk_timing(10, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100)
         k = 0
         while k < len(data):
@@ -67,8 +65,8 @@ for j in range(1,6):
         # create separate list for the data for the specific channel which we are concerned with. 'Count' is the numbered iteration of the for loop (https://stackoverflow.com/questions/25050311/extract-first-item-of-each-sublist)
         print('count is', count)
         channel_data = [item[count-s] for item in data]
-        print("Full data is", data)
-        print("channel data for channel", channels[count], ":\n", channel_data)
+        # print("Full data is", data)
+        print("channel data for channel", i, ":\n", channel_data)
         print(max(channel_data))
         MVolt.append(round(max(channel_data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
         IntVolt.append(sum(channel_data))                                   # are correctly calibrated 
