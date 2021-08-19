@@ -34,7 +34,7 @@ for j in range(1,6):
         channels.append(header+str(j)+address+str(i))
         task.ai_channels.add_ai_voltage_chan(header+str(j)+address+str(i))
             
-            
+    print("Channels are", channels)
         # print('The task is',task)
         # Set the timing for the task
         # task.timing.cfg_samp_clk_timing(10, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100)
@@ -43,10 +43,11 @@ for j in range(1,6):
     dataframe = pd.DataFrame()
     pd.set_option('display.max_columns', None) # prevents trailing elipses
 
-
+    # Set the start, s, equal to 0.
+    s = 0
     # Starts a loop for each channel, for each channel takes 1 mil measurements and saves it into an array, after it takes all million
     # it loads the array into the dataframe and starts again
-    for count, i in enumerate(channels):
+    for count, i in enumerate(channels, start=s):
         print(i)
             # Define task and add channel with each loop through i to keep the task.read from returning a list of lists, rather than one list
         # task.ai_channels.add_ai_voltage_chan(i)
@@ -58,14 +59,17 @@ for j in range(1,6):
         task.stop()
         # print(data)
         # create separate list for the data for the specific channel which we are concerned with. 'Count' is the numbered iteration of the for loop (https://stackoverflow.com/questions/25050311/extract-first-item-of-each-sublist)
+        print('count is', count)
         channel_data = [item[count] for item in data]
-        # print(np.size(data))
+        print(np.size(data))
         print("channel data for channel", channels[count], ":\n", channel_data)
         print(max(channel_data))
         MVolt.append(round(max(channel_data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
         IntVolt.append(sum(channel_data))                                   # are correctly calibrated 
         dataframe.insert(len(dataframe.columns),i,channel_data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
-                                                                    # But it currently goes the other way
+        # Add 8 to s, so the next count starts at                           # But it currently goes the other way
+        s += 8                                                              
+                                                                
 
         
    
