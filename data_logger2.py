@@ -77,7 +77,7 @@ for j in range(1,6):
         
     s += 8                                                              
                                                                 
-
+    task.close()
         
    
 # print(dataframe)
