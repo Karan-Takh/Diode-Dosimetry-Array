@@ -17,7 +17,7 @@ from nidaqmx.constants import AcquisitionType
 header = "Dev"
 address= "/ai"
 channels = []
-data = [0]*1000000
+data = [0]*100000
 MVolt = []
 IntVolt = []
 names = []
@@ -55,7 +55,7 @@ for j in range(1,6):
     for count, i in enumerate(current_chans, start=s):
         # print("start is", s)
         # print("For channel:", i)
-        task.timing.cfg_samp_clk_timing(2500000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=1000000)
+        task.timing.cfg_samp_clk_timing(2500000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100000)
         k = 0
         # Add start and stop to try to improve performance. (unsure where each of these statements would best go)
         task.start()
@@ -73,8 +73,8 @@ for j in range(1,6):
         MVolt.append(round(max(channel_data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
         IntVolt.append(sum(channel_data))                                   # are correctly calibrated 
         dataframe.insert(len(dataframe.columns),i,channel_data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
-        # Add 8 to s, so the next count starts at                           # But it currently goes the other way
-        
+                                                                            # But it currently goes the other way
+    # Add 8 to s, so the next count starts at                           
     s += 8                                                              
                                                                 
     task.close()
