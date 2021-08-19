@@ -27,6 +27,7 @@ names = []
 # Outermost loop to loop through each pxi device as a separate task. 
 for j in range(1,6):
     task = ni.Task()
+    print("The task is Dev" + str(j))
     # task = "Dev" + str(j)
     # with ni.Task() as task:
     for i in range(0,8):
@@ -55,7 +56,7 @@ for j in range(1,6):
             data[k] = (task.read())
             k+=1
         task.stop()
-        print(data)
+        # print(data)
         # create separate list for the data for the specific channel which we are concerned with. 'Count' is the numbered iteration of the for loop (https://stackoverflow.com/questions/25050311/extract-first-item-of-each-sublist)
         channel_data = [item[count] for item in data]
         # print(np.size(data))
