@@ -17,7 +17,7 @@ from nidaqmx.constants import AcquisitionType
 header = "Dev"
 address= "/ai"
 channels = []
-data = [0]*100
+data = [0]*1000000
 MVolt = []
 IntVolt = []
 names = []
@@ -30,7 +30,7 @@ for j in range(1,6):
     # Make a separate list for the channels of the specific device we are dealing with
     current_chans = []
     task = ni.Task("Dev"+str(j))
-    print("The task is Dev" + str(j))
+    # print("The task is Dev" + str(j))
     # task = "Dev" + str(j)
     # with ni.Task() as task:
     for i in range(0,8):
@@ -39,35 +39,37 @@ for j in range(1,6):
         current_chans.append(header+str(j)+address+str(i))
         task.ai_channels.add_ai_voltage_chan(header+str(j)+address+str(i))
             
-    print("All Channels are", channels)
-    print("Current channels are", current_chans)
+    # print("All Channels are", channels)
+    # print("Current channels are", current_chans)
         # print('The task is',task)
         # Set the timing for the task
         # task.timing.cfg_samp_clk_timing(10, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100)
 
         # Creates empty dataframe
     dataframe = pd.DataFrame()
-    pd.set_option('display.max_columns', None) # prevents trailing elipses
+    # pd.set_option('display.max_columns', None) # prevents trailing elipses
 
     
     # Starts a loop for each channel, for each channel takes 1 mil measurements and saves it into an array, after it takes all million
     # it loads the array into the dataframe and starts again
     for count, i in enumerate(current_chans, start=s):
-        print("start is", s)
-        print("For channel:", i)
-        task.timing.cfg_samp_clk_timing(10, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100)
+        # print("start is", s)
+        # print("For channel:", i)
+        task.timing.cfg_samp_clk_timing(2500000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=1000000)
         k = 0
+        # Add start and stop to try to improve performance. (unsure where each of these statements would best go)
+        task.start()
         while k < len(data):
             data[k] = (task.read())
             k+=1
         task.stop()
         # print(data)
         # create separate list for the data for the specific channel which we are concerned with. 'Count' is the numbered iteration of the for loop (https://stackoverflow.com/questions/25050311/extract-first-item-of-each-sublist)
-        print('count is', count)
+        # print('count is', count)
         channel_data = [item[count-s] for item in data]
         # print("Full data is", data)
-        print("channel data for channel", i, ":\n", channel_data)
-        print(max(channel_data))
+        # print("channel data for channel", i, ":\n", channel_data)
+        # print(max(channel_data))
         MVolt.append(round(max(channel_data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
         IntVolt.append(sum(channel_data))                                   # are correctly calibrated 
         dataframe.insert(len(dataframe.columns),i,channel_data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
