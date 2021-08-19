@@ -27,15 +27,20 @@ names = []
 s = 0
 # Outermost loop to loop through each pxi device as a separate task. 
 for j in range(1,6):
+    # Make a separate list for the channels of the specific device we are dealing with
+    current_chans = []
     task = ni.Task()
     print("The task is Dev" + str(j))
     # task = "Dev" + str(j)
     # with ni.Task() as task:
     for i in range(0,8):
         channels.append(header+str(j)+address+str(i))
+        # Add headers to the current channels list too. It should be empty by this step in each loop through j. 
+        current_chans.append(header+str(j)+address+str(i))
         task.ai_channels.add_ai_voltage_chan(header+str(j)+address+str(i))
             
-    print("Channels are", channels)
+    print("All Channels are", channels)
+    print("Current channels are", current_chans)
         # print('The task is',task)
         # Set the timing for the task
         # task.timing.cfg_samp_clk_timing(10, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100)
@@ -49,7 +54,7 @@ for j in range(1,6):
     # it loads the array into the dataframe and starts again
     for count, i in enumerate(channels, start=s):
         print("start is", s)
-        print(i)
+        print(channels.index(i)+8)
             # Define task and add channel with each loop through i to keep the task.read from returning a list of lists, rather than one list
         # task.ai_channels.add_ai_voltage_chan(i)
         task.timing.cfg_samp_clk_timing(10, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100)
@@ -62,7 +67,7 @@ for j in range(1,6):
         # create separate list for the data for the specific channel which we are concerned with. 'Count' is the numbered iteration of the for loop (https://stackoverflow.com/questions/25050311/extract-first-item-of-each-sublist)
         print('count is', count)
         channel_data = [item[count-s] for item in data]
-        print(np.size(data))
+        print("Full data is", data)
         print("channel data for channel", channels[count], ":\n", channel_data)
         print(max(channel_data))
         MVolt.append(round(max(channel_data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
