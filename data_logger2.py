@@ -17,7 +17,7 @@ from nidaqmx.constants import AcquisitionType
 header = "Dev"
 address= "/ai"
 channels = []
-data = [0]*1000
+data = [0]*100
 MVolt = []
 IntVolt = []
 names = []
@@ -32,9 +32,10 @@ for j in range(1,6):
             channels.append(header+str(j)+address+str(i))
             task.ai_channels.add_ai_voltage_chan(header+str(j)+address+str(i))
             
-        print(task)
+            
+        print('The task is',task)
         # Set the timing for the task
-        task.timing.cfg_samp_clk_timing(100, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=1000)
+        task.timing.cfg_samp_clk_timing(10, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100)
 
         # Creates empty dataframe
         dataframe = pd.DataFrame()
@@ -46,16 +47,21 @@ for j in range(1,6):
         for i in channels:
             print(i)
             k = 0
+            print("the task is", task)
             while k < len(data):
+                # task.ai_channels.add_ai_voltage_chan(i)
                 data[k] = (task.read())
                 k+=1
+            print(data)
+            print(max(data))
+            print(np.size(data))
             MVolt.append(round(max(data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
             IntVolt.append(sum(data))                                   # are correctly calibrated 
             dataframe.insert(len(dataframe.columns),i,data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
                                                                     # But it currently goes the other way
 
         
-        task.stop()
+    task.stop()
    
 # print(dataframe)
 
