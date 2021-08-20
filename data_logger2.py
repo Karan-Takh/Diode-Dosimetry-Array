@@ -49,13 +49,13 @@ for j in range(1,6):
     dataframe = pd.DataFrame()
     # pd.set_option('display.max_columns', None) # prevents trailing elipses
 
-    
+    task.timing.cfg_samp_clk_timing(2500000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100000)
+
     # Starts a loop for each channel, for each channel takes 1 mil measurements and saves it into an array, after it takes all million
     # it loads the array into the dataframe and starts again
     for count, i in enumerate(current_chans, start=s):
         # print("start is", s)
         # print("For channel:", i)
-        task.timing.cfg_samp_clk_timing(2500000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100000)
         k = 0
         # Add start and stop to try to improve performance. (unsure where each of these statements would best go)
         task.start()
