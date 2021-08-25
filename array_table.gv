@@ -24,11 +24,11 @@ graph array_table {
     <TR>
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
 
-        <TD bgcolor="#ffffff" fixedsize="true" width="70"
-        height="70"><FONT COLOR="black">Diode 1 <BR align="center" /> -0.34 V</FONT></TD>
+        <TD bgcolor="#330000" fixedsize="true" width="70"
+        height="70"><FONT COLOR="white">Diode 1 <BR align="center" /> 4.42 V</FONT></TD>
 
         <TD bgcolor="#1a0000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 2 <BR align="center" /> 4.55 V</FONT></TD>
+        height="70"><FONT COLOR="white">Diode 2 <BR align="center" /> 4.77 V</FONT></TD>
 
         <TD bgcolor="#000000" fixedsize="true" width="70"
         height="70"><FONT COLOR="white">Diode 3 <BR align="center" /> 5.0 V</FONT></TD>
@@ -39,8 +39,8 @@ graph array_table {
         <TD bgcolor="#000000" fixedsize="true" width="70"
         height="70"><FONT COLOR="white">Diode 5 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#ff0000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 6 <BR align="center" /> 2.36 V</FONT></TD>
+        <TD bgcolor="#ff3333" fixedsize="true" width="70"
+        height="70"><FONT COLOR="white">Diode 6 <BR align="center" /> 2.47 V</FONT></TD>
 
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
     </TR>
@@ -55,8 +55,8 @@ graph array_table {
         <TD bgcolor="#000000" fixedsize="true" width="70"
         height="70"><FONT COLOR="white">Diode 8 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#ffe6e6" fixedsize="true" width="70"
-        height="70"><FONT COLOR="black">Diode 9 <BR align="center" /> 0.1 V</FONT></TD>
+        <TD bgcolor="#ffffff" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 9 <BR align="center" /> 0.7 V</FONT></TD>
 
         <TD bgcolor="#000000" fixedsize="true" width="70"
         height="70"><FONT COLOR="white">Diode 10 <BR align="center" /> 5.0 V</FONT></TD>

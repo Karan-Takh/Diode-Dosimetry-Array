@@ -39,7 +39,7 @@ for j in range(1,6):
     task.timing.cfg_samp_clk_timing(2500, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=1000)
     
     # Create empty array for stream readers. For now just do 1,000 samples. 
-    array = np.empty((1000, 8), dtype=float, like=None)
+    array = np.empty((1000, 8))
 
     task.start()
 
