@@ -70,7 +70,7 @@ for j in range(1,6):
         # print("Full data is", data)
         # print("channel data for channel", i, ":\n", channel_data)
         # print(max(channel_data))
-        MVolt.append(round(max(channel_data),2))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
+        MVolt.append(round(max(channel_data),5))                            # These look very different when the voltages are around 4V but are roughly the same when the channels
         IntVolt.append(sum(channel_data))                                   # are correctly calibrated 
         dataframe.insert(len(dataframe.columns),i,channel_data)             # would be nice to make this so that the dataframe prints from Dev1/ai0 -> Dev5/ai7 but 
                                                                             # But it currently goes the other way
@@ -105,7 +105,7 @@ voltdict = dict(zip(names,MVolt))       # Used MVolt and not IntVolt as it seeme
 
 # Takes the lowest and highest voltage values and creates 22 equal intervals between these values
 voltsort = sorted(voltdict.items(), key=lambda voltdict: voltdict[1])
-voltrange = np.linspace(voltsort[0][1], voltsort[39][1], num=22)
+voltrange = np.linspace(voltsort[0][1], voltsort[33][1], num=22)
 
 # print('Intervals:', list(voltrange))  --- Don't print; will get crazy as we're doing million samples
 
@@ -219,7 +219,11 @@ for key in voltdict.keys():
         templist.append('white')
         colordict[key] = templist
     else:
-        print(voltdict[key], 'is out of range')
+        # print(voltdict[key], 'is out of range')
+        templist.append(voltdict[key])
+        templist.append('#0000ff')
+        templist.append('white')
+        colordict[key] = templist
 
 print('Assigned Colors:', colordict)
 

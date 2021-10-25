@@ -10,8 +10,8 @@ graph array_table {
 
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 37 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 37 <BR align="center" /> 5.0 V</FONT></TD>
 
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
 
@@ -24,48 +24,23 @@ graph array_table {
     <TR>
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
 
-        <TD bgcolor="#330000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 1 <BR align="center" /> 4.42 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 1 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#1a0000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 2 <BR align="center" /> 4.77 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 2 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 3 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 3 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 4 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 4 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 5 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 5 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#ff3333" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 6 <BR align="center" /> 2.47 V</FONT></TD>
-
-        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
-    </TR>
-
-
-    <TR>
-        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 7 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 8 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#ffffff" fixedsize="true" width="70"
-        height="70"><FONT COLOR="black">Diode 9 <BR align="center" /> 0.7 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 10 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 11 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 12 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 6 <BR align="center" /> 5.0 V</FONT></TD>
 
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
     </TR>
@@ -74,75 +49,23 @@ graph array_table {
     <TR>
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 13 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 7 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 14 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 8 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 15 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 9 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 16 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 10 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 17 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 11 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 18 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
-    </TR>
-
-
-    <TR>
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 38 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 19 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 20 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 21 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 22 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 23 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 24 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 39 <BR align="center" /> 5.0 V</FONT></TD>
-    </TR>
-
-
-    <TR>
-        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 25 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 26 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 27 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 28 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 29 <BR align="center" /> 5.0 V</FONT></TD>
-
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 30 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 12 <BR align="center" /> 5.0 V</FONT></TD>
 
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
     </TR>
@@ -151,23 +74,100 @@ graph array_table {
     <TR>
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 31 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 13 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 32 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 14 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 33 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 15 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 34 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 16 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 35 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 17 <BR align="center" /> 5.0 V</FONT></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 36 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 18 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+    </TR>
+
+
+    <TR>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 38 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 19 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 20 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 21 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 22 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 23 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 24 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 39 <BR align="center" /> 5.0 V</FONT></TD>
+    </TR>
+
+
+    <TR>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 25 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 26 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 27 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 28 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 29 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 30 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+    </TR>
+
+
+    <TR>
+        <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 31 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 32 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 33 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 34 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 35 <BR align="center" /> 5.0 V</FONT></TD>
+
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 36 <BR align="center" /> 5.0 V</FONT></TD>
 
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
     </TR>
@@ -182,8 +182,8 @@ graph array_table {
 
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
 
-        <TD bgcolor="#000000" fixedsize="true" width="70"
-        height="70"><FONT COLOR="white">Diode 40 <BR align="center" /> 5.0 V</FONT></TD>
+        <TD bgcolor="#ff9999" fixedsize="true" width="70"
+        height="70"><FONT COLOR="black">Diode 40 <BR align="center" /> 5.0 V</FONT></TD>
 
         <TD bgcolor="#cccccc" fixedsize="true" width="70" height="70"></TD>
 
