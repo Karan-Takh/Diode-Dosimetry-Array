@@ -8,7 +8,7 @@ import pandas as pd
 import nidaqmx as ni
 from graphviz import Graph
 import numpy as np
-from nidaqmx.constants import LineGrouping
+# from nidaqmx.constants import LineGrouping
 from nidaqmx.constants import Edge
 from nidaqmx.constants import AcquisitionType
 
@@ -39,18 +39,13 @@ for j in range(1,6):
         current_chans.append(header+str(j)+address+str(i))
         task.ai_channels.add_ai_voltage_chan(header+str(j)+address+str(i))
             
-    # print("All Channels are", channels)
-    # print("Current channels are", current_chans)
-        # print('The task is',task)
-        # Set the timing for the task
-        # task.timing.cfg_samp_clk_timing(10, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100)
 
-        # Creates empty dataframe
+    # Creates empty dataframe
     dataframe = pd.DataFrame()
     # pd.set_option('display.max_columns', None) # prevents trailing elipses
 
     task.timing.cfg_samp_clk_timing(2500000, active_edge=Edge.RISING,sample_mode=AcquisitionType.FINITE,samps_per_chan=100000)
-
+    
     # Starts a loop for each channel, for each channel takes 1 mil measurements and saves it into an array, after it takes all million
     # it loads the array into the dataframe and starts again
     for count, i in enumerate(current_chans, start=s):
